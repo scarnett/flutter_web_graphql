@@ -35,9 +35,9 @@ The PostgreSQL database contains only a single schema with one table - `users`.
 | Field      | Type | Optional | PK  |
 | -----------|------|----------|-----|
 | id         | int  | NO       | YES |
-| first_name | text | NO       | YES |
-| last_name  | text | NO       | YES |
-| email      | text | NO       | YES |
+| first_name | text | NO       | NO  |
+| last_name  | text | NO       | NO  |
+| email      | text | NO       | NO  |
 
 ## Credits
 Created by [@scarnett](https://github.com/scarnett/)
