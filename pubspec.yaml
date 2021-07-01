@@ -1,0 +1,22 @@
+name: flutter_web_graphql
+publish_to: 'none'
+version: 1.0.0
+
+environment:
+  sdk: '>=2.12.0 <3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  bloc: '^7.0.0'
+  cupertino_icons: '^1.0.2'
+  equatable: '^2.0.3'
+  flutter_bloc: '^7.0.1'
+  graphql: '^5.0.0'
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
