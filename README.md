@@ -2,6 +2,10 @@
 
 This is a simple CRUD application built with Flutter for maintaining users. This project uses a [Hasura](https://www.hasura.io/) GraphQL API to interact with a PostgreSQL database that's hosted on [Heroku](https://www.heroku.com/).
 
+<img src="docs/images/screen.png" width="300" />
+
+---
+
 ## Setup
 
 In order to run this application you need to install [Flutter](https://www.flutter.dev/).
