@@ -10,6 +10,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+
+      - name: 'Configure flutter'
+        uses: subosito/flutter-action@v1
+        with:
+          channel: stable
+          flutter-version: '2.2.2'
+
+      - name: 'Build flutter web'
+        run: flutter build web
+
+      - name: 'Deploy to Firebase hosting'
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
