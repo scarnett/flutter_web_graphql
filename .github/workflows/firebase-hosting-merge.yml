@@ -6,8 +6,12 @@ on:
       - main
 
 jobs:
-  build_and_deploy:
+  deploy:
     runs-on: ubuntu-latest
+    env:
+      APP_ENV_CONFIG: ${{ secrets.APP_ENV_CONFIG }}
+      APP_ENV_CONFIG_FILE_PATH: ${{ './lib/env_config.dart' }}
+
     steps:
       - uses: actions/checkout@v2
 
@@ -17,10 +21,13 @@ jobs:
           channel: stable
           flutter-version: '2.2.2'
 
+      - name: 'Decode lib/env_config.dart'
+        run: echo "${{ env.APP_ENV_CONFIG }}" > "${{ env.APP_ENV_CONFIG_FILE_PATH }}"
+
       - name: 'Build flutter web'
         run: flutter build web
 
-      - name: 'Deploy to Firebase hosting'
+      - name: 'Deploy to firebase hosting'
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
