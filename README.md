@@ -28,7 +28,10 @@ flutter run
 
 ## Build
 ```bash
-flutter build # mobile
+flutter build apk # android apk
+flutter build appbundle # android app bundle
+flutter build ios # ios application bundle
+flutter build ipa # ios archive bundle
 flutter build web # web
 ```
 
