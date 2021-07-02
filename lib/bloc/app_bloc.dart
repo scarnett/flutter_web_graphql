@@ -5,7 +5,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_web_graphql/app_theme.dart';
 import 'package:flutter_web_graphql/models/models.dart';
 import 'package:flutter_web_graphql/service/service.dart';
-import 'package:flutter_web_graphql/users/widgets/user_form.dart';
+import 'package:flutter_web_graphql/users/widgets/widgets.dart';
 import 'package:flutter_web_graphql/utils/common_utils.dart';
 
 part 'app_events.dart';
