@@ -10,12 +10,6 @@ This is a simple CRUD application built with Flutter for maintaining users. This
 
 In order to run this application you need to install [Flutter](https://www.flutter.dev/).
 
-## Run
-
-```bash
-flutter run
-```
-
 ## Environment Configuration
 
 You will need to create `lib/env_config.dart` with the following:
@@ -24,6 +18,18 @@ You will need to create `lib/env_config.dart` with the following:
 class EnvConfig {
   static const String GRAPHQL_URL = '<your_hasura_graphql_url>';
 }
+```
+
+## Run
+
+```bash
+flutter run
+```
+
+## Build
+```bash
+flutter build # mobile
+flutter build web # web
 ```
 
 ## PostgreSQL (Database)
