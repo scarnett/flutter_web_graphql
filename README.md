@@ -17,7 +17,6 @@ You will need to create `lib/env_config.dart` with the following:
 ```dart
 class EnvConfig {
   static const String GRAPHQL_URL = '<your_hasura_graphql_url>';
-  static const String HASURA_ADMIN_SECRET = '<your_hasura_admin_secret>';
 }
 ```
 
