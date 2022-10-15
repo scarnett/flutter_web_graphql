@@ -5,7 +5,11 @@ class GraphQLService {
   late GraphQLClient _client;
 
   GraphQLService() {
-    HttpLink link = HttpLink(EnvConfig.GRAPHQL_URL);
+    HttpLink link = HttpLink(EnvConfig.GRAPHQL_URL, defaultHeaders: {
+      'content-type': 'application/json',
+      'x-hasura-admin-secret': EnvConfig.HASURA_ADMIN_SECRET,
+    });
+
     _client = GraphQLClient(
       link: link,
       cache: GraphQLCache(),
